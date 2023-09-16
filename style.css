@@ -1,0 +1,156 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+
+    --LeftArea: 15vw;
+    --MidArea: 60vw;
+    --RightArea: 25vw;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+
+.Container
+{
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.Summary
+{
+    width: var(--LeftArea);
+    background-color: blue;
+}
+
+.Summary .ButtonContainer button
+{
+    width: var(--LeftArea);
+    height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size:larger;
+
+}
+
+.ButtonContainer
+{
+    width: var(--LeftArea);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.ItemPage
+{
+    width: var(--MidArea);
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.Item
+{
+    height: 25vh;
+    /* width: 20vw; */
+    border-radius: 10px;
+    border: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.Item:hover
+{
+    opacity: 80%;
+}
+
+.Item:active
+{
+    opacity: 60%;
+}
+
+.Item[Breakfast]
+{
+    background-color: red;
+}
+
+.Item[Lunch]
+{
+    background-color: orange;
+}
+
+.Item[Dinner]
+{
+    background-color: yellow;
+}
+
+
+.Item[Hidden]
+{
+    display: None;
+}
+
+.OrderContainer
+{   
+    border: 3px solid black;
+    width: var(--RightArea);
+    background-color:gray;
+}
+
+#ConfirmButton, #ClearButton
+{
+    /* position: fixed;
+    bottom: 0px;
+    right: 0px;  */
+    width: 50%;
+    height: 100px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+
+.OrderContainer div
+{
+    display: flex;
+    /* background: white; */
+    height: 100px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font: italic bold 10em;
+}
+
+.OrderName
+{
+    display: flex;
+    background-color: #8B5CF6;
+    justify-content: center;
+    align-items: center;    
+    
+    width: 70%;
+    height: 100%;
+}
+
+.CancelButton
+{
+    width: 30%;
+    height: 100%;
+}
